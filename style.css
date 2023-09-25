@@ -1,13 +1,16 @@
 @font-face {
-    font-family: "adelicia";
-    src: url("./assets/font/AdeliciaRegular.woff") format('woff'),
-         url("./assets/font/AdeliciaRegular.woff2") format('woff2');
-}
-
-@font-face {
     font-family: "bacalisties";
     src: url("./assets/font/Bacalisties.woff") format('woff'),
          url("./assets/font/Bacalisties.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: quicksand;
+    font-style: normal;
+    font-display: swap;
+    src: url("./assets/font/Quicksand-VariableFont_wght.woff") format('woff'),
+         url("./assets/font/Quicksand-VariableFont_wght.woff2") format('woff2');
+    font-weight: 300 700;
 }
 
 /* Reset */
@@ -57,7 +60,7 @@ svg {
     --font: var(--font-baca);
 
     /* Colors */
-    --black: #000;
+    --black: #3e1d00;
     --general-black: #181819;
     --white: #F9F6EE;
     --grey: #F5F5F5;
@@ -96,7 +99,7 @@ svg {
     right: 0;
     bottom: -100px;
     background-color: var(--dark-orange);
-    opacity: 30%;
+    opacity: 50%;
 }
 
 /* Header */
@@ -116,6 +119,7 @@ svg {
 .header_style {
     font-family: var(--font);
     font-size: 30px;
+    color: var(--black);
 }
 
 .header_logo {
@@ -124,6 +128,12 @@ svg {
 
 .header_text {
     padding-right: 40px;
+}
+
+.header_date {
+    font-family: quicksand;
+    font-size: 40px;
+    color: var(--black);
 }
 
 
@@ -140,4 +150,14 @@ h1 {
     font-size: 200px;
     width: 100%;
     text-align: center;
+}
+
+#demo {
+    position: relative;
+    top: 210px;
+    font-family: quicksand;
+    font-size: 50px;
+    color: var(--white);
+    text-align: center;
+    font-weight: 700;
 }
