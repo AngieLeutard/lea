@@ -1,12 +1,26 @@
+@font-face {
+    font-family: "adelicia";
+    src: url("./assets/font/AdeliciaRegular.woff") format('woff'),
+         url("./assets/font/AdeliciaRegular.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "bacalisties";
+    src: url("./assets/font/Bacalisties.woff") format('woff'),
+         url("./assets/font/Bacalisties.woff2") format('woff2');
+}
+
 /* Reset */
 
 html {
     height: 100%;
     font-size: 100%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
+    height: 100%;
     position: relative;
     max-width: 1440px;
     background-color: var(--grey);
@@ -36,6 +50,94 @@ svg {
     cursor: pointer;
 }
 
-.background_img {
+:root {
+    /* Font */
+    --font-baca: "bacalisties";
+
+    --font: var(--font-baca);
+
+    /* Colors */
+    --black: #000;
+    --general-black: #181819;
+    --white: #F9F6EE;
+    --grey: #F5F5F5;
+    --dark-grey: #667085;
+    --dark-orange: #804600;
+    --light-orange: #FFC680;
+
+    /* General var-colors */
+    --text-color: var(--white);
+}
+
+/* Body */
+
+.parallax {
+    position: relative;
+
+    /* The image used */
+    background-image: url("./assets/gateau.jpg");
+    
+    /* Full height */
+    height: 100%;
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax::before {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    bottom: -100px;
+    background-color: var(--dark-orange);
+    opacity: 30%;
+}
+
+/* Header */
+
+.headerWrapper {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
     width: 100%;
+    height: 70px;
+}
+
+.header_style {
+    font-family: var(--font);
+    font-size: 30px;
+}
+
+.header_logo {
+    padding-left: 40px;
+}
+
+.header_text {
+    padding-right: 40px;
+}
+
+
+/* Main */
+
+.text {
+    font-family: var(--font);
+    color: var(--text-color);
+}
+
+h1 {
+    position: relative;
+    top: 290px;
+    font-size: 200px;
+    width: 100%;
+    text-align: center;
 }
