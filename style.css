@@ -101,7 +101,7 @@ svg {
     right: 0;
     bottom: 0;
     background-color: var(--black);
-    opacity: 50%;
+    opacity: 20%;
 }
 
 /* Header */
@@ -211,8 +211,11 @@ h1 {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 0;
     width: 50%;
+}
+
+.abbaye_picture {
+    right: 0;
 }
 
 /* Footer */
