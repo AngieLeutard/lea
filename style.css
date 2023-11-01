@@ -26,7 +26,7 @@ body {
     height: 100%;
     position: relative;
     max-width: 1440px;
-    background-color: var(--grey);
+    background-color: var(--white);
     margin: 0 auto;
 }
 
@@ -186,6 +186,11 @@ h1 {
     width: 100%;
     margin-top: 60px;
     margin-bottom: 60px;
+    align-items: center;
+}
+
+.information_section_eglise {
+    flex-flow: row-reverse;
 }
 
 .information_container {
@@ -212,10 +217,24 @@ h1 {
     top: 0;
     bottom: 0;
     width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mairie_picture {
+    right: 0;
+}
+
+.eglise_picture {
+    left: 0;
 }
 
 .abbaye_picture {
     right: 0;
+}
+
+.image_container {
+    height: 530px;
 }
 
 /* Footer */
@@ -259,6 +278,37 @@ h1 {
     .count {
         font-size: 30px;
     }
+
+    .information_container {
+        gap: 20px;
+    }
+
+    .information_title {
+        text-align: center;
+        font-size: 77px;
+    }
+
+    .information_description {
+        text-align: center;
+        font-size: 37px;
+    }
+
+    .information_section {
+        flex-direction: column;
+        position: initial;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .information_image {
+        width: 100%;
+        position: initial;
+    }
+
+    .image_container {
+        height: 470px;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -289,10 +339,22 @@ h1 {
     .header_text {
         padding-right: 20px;
     }
+
+    .information_title {
+        font-size: 50px;
+    }
+
+    .information_description {
+        font-size: 27px;
+    }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
     h1 {
+        font-size: 40px;
+    }
+
+    .date {
         font-size: 40px;
     }
 
@@ -307,4 +369,29 @@ h1 {
     .header_style {
         font-size: 12px;
     }
+
+    .information_title {
+        font-size: 30px;
+    }
+
+    .information_container {
+        gap: 0;
+    }
+
+    .information_description {
+        font-size: 15px;
+    }
+
+    .information_container {
+        padding: 10px;
+    }
+
+    .image_container {
+        height: 280px;
+    }
+
+    .footerWrapper {
+        text-align: center;
+        font-size: 15px;
+    } 
 }
